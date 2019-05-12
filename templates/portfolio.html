@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Kostas Poimenidis</title>
+        <link rel="stylesheet" href="static/styles.css" type="text/css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('main') }}">About</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
+                        <li><a href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content" >
+              <section class="hero">
+                <img src="static/images/profile.png"/>
+                <div class="hero-content">
+                  <h1>Kostas Poimenidis<br>SOFTWARE DEVELOPER</h1>
+                  <p>bla bla bla
+                  </p>
+                  <a class="action-btn" href="{{ url_for('Form') }}">Contact with me</a>
+                </div>
+              </section>
+            </div>
+            <div class="footer">
+              <footer>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/kostas-poimenidis-409b95177/"><img id="svg" src="static/images/linkedin.svg"/><p>LinkedIn</p></a></li><br>
+                    <li><a href="https://github.com/poimenidis"><img id="svg" src="static/images/github.svg"/><p>Github</p></a></li><br>
+					<li><a href="https://stackoverflow.com/users/10879962/kostas-poime?tab=profile"><img id="svg" src="static/images/stackoverflow.svg"/><p>Stack</p></a></li><br>
+                    <li><a href="https://www.facebook.com/kostaspoime"><img id="svg" src="static/images/facebook.svg"/><p>Facebook</p></a></li><br>
+                    <li><a href="https://www.instagram.com/kostaspoime/"><img id="svg" src="static/images/instagram.svg"/><p>Instagram</p></a></li>
+                </ul>
+              </footer>
+            </div>
+        </div>
+        
+    </body>
+</html>
+
