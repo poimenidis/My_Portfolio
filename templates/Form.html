@@ -2,6 +2,7 @@
 <html>
     
     <head>
+		<link rel="icon" href="static/images/email.png">
         <title>Kostas Poimenidis</title>
         <link rel="stylesheet" href="static/styles_contact.css" type="text/css">
     </head>
@@ -10,30 +11,30 @@
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="{{ url_for('main') }}">About</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a id="about" href="{{ url_for('main') }}">About</a></li>
+                        <li><a id="resume" href="#">Resume</a></li>
                         <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
-                        <li><a href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
+                        <li><a id="myWork" href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
                     </ul>
                 </nav>
             </div>
            <div class="content">
             <section class="hero">
-                 <h1>Please ask me anything you want!!</h1>
+                 <h1 id="ask">Please ask me anything you want!!</h1>
 
                 <form method="POST" action="https://formspree.io/konstadinospoi@gmail.com">
 
                     <div class="form-control">
                     <label>Email: </label>
-                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="email" name="email" id="emailEnter" placeholder="Enter Your Email" required>
                     </div>
                     <br>
                     <div class="form-control">
-                    <label>Message: </label>
-                    <textarea name="message" rows="4" placeholder="Enter Your Message" required></textarea>
+                    <label id="message">Message: </label>
+                    <textarea name="message" id="messageEnter" rows="4" placeholder="Enter Your Message" required></textarea>
                     </div>
                     <br>
-                    <button class="action-btn" type="submit">SEND ME A MESSAGE</button>
+                    <button class="action-btn" id="send" type="submit">SEND ME A MESSAGE</button>
                 </form>
             </section>
         </div>
@@ -53,3 +54,51 @@
     </body>
 </html>
 
+<script type="text/javascript">
+    var language = {
+        eng: {
+            about: "About",
+            resume: "Resume",
+            myWork: "My Work",
+            ask: "Please ask me anything you want!!",
+            emailEnter: "Enter Your Email",
+            message: "Message: ",
+            messageEnter: "Enter Your Message",
+            send: "SEND ME A MESSAGE"
+        },
+        el:{
+            about: "Σχετικά",
+            resume: "Βιογραφικό",
+            myWork: "Τα Project μου",
+            ask: "Κάνε μου οποιαδήποτε ερώτηση!!",
+            emailEnter: "Συμπλήρωσε το Email σου...",
+            message: "MHNYMA: ",
+            messageEnter: "Συμπλήρωσε το μήνυμα σου...",
+            send: "ΣΤΕΙΛΕ ΜΟΥ ΕΝΑ ΜΗΝΥΜΑ"
+        }
+    };
+
+    var userLang = window.navigator.language;
+
+    if(userLang==="en-GB"){
+        about.textContent = language.eng.about;
+        resume.textContent = language.eng.resume;
+        myWork.textContent = language.eng.myWork;
+        ask.textContent = language.eng.ask;
+        emailEnter.placeholder = language.eng.emailEnter;
+        message.textContent = language.eng.message;
+        messageEnter.placeholder = language.eng.messageEnter;
+        send.textContent = language.eng.send;
+    }
+
+    if(userLang==="el"){
+        about.textContent = language.el.about;
+        resume.textContent = language.el.resume;
+        myWork.textContent = language.el.myWork;
+        ask.textContent = language.el.ask;
+        emailEnter.placeholder = language.el.emailEnter;
+        message.textContent = language.el.message;
+        messageEnter.placeholder = language.el.messageEnter;
+        send.textContent = language.el.send;
+    }
+</script>

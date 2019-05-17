@@ -2,6 +2,7 @@
 <html>
     
     <head>
+		<link rel="icon" href="static/images/googlePlay.png">
         <title>Kostas Poimenidis</title>
         <link rel="stylesheet" href="static/styles_google_play.css" type="text/css">
     </head>
@@ -10,10 +11,10 @@
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="{{ url_for('main') }}">About</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a id="about" href="{{ url_for('main') }}">About</a></li>
+                        <li><a id="resume" href="#">Resume</a></li>
                         <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
-                        <li><a href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
+                        <li><a id="myWork" href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
                     </ul>
                 </nav>
             </div>
@@ -23,7 +24,7 @@
                 <img src="static/images/ic_ayeblink_launch.png"/>
                 <div class="hero-content">
                   <h1>AyeBlink<br>The Real social network</h1>
-                  <p>bla bla bla</p>
+                  <p id="descriptionAYE">bla bla bla</p>
                 </div>
               </section>
 			  <br>
@@ -38,7 +39,7 @@
 				</a>
                 <div class="hero2-content">
                   <h1>Triumph on Tichu</h1>
-                  <p>bla bla bla</p>
+                  <p id="descriptionTR">bla bla bla</p>
                 </div>
               </section>
 			  
@@ -60,3 +61,39 @@
     </body>
 </html>
 
+<script type="text/javascript">
+    var language = {
+        eng: {
+            about: "About",
+            resume: "Resume",
+            myWork: "My Work",
+            descriptionAYE: "bla bla bla",
+            descriptionTR: "bla bla bla"
+        },
+        el:{
+            about: "Σχετικά",
+            resume: "Βιογραφικό",
+            myWork: "Τα Project μου",
+            descriptionAYE: "bla bla blaE",
+            descriptionTR: "bla bla blaA"
+        }
+    };
+
+    var userLang = window.navigator.language;
+
+    if(userLang==="en-GB"){
+        about.textContent = language.eng.about;
+        resume.textContent = language.eng.resume;
+        myWork.textContent = language.eng.myWork;
+        descriptionAYE.textContent = language.eng.descriptionAYE;
+        descriptionTR.textContent = language.eng.descriptionTR;
+    }
+
+    if(userLang==="el"){
+        about.textContent = language.el.about;
+        resume.textContent = language.el.resume;
+        myWork.textContent = language.el.myWork;
+        descriptionAYE.textContent = language.el.descriptionAYE;
+        descriptionTR.textContent = language.el.descriptionTR;
+    }
+</script>

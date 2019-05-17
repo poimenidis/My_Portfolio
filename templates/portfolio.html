@@ -2,6 +2,7 @@
 <html>
     
     <head>
+		<link rel="icon" href="static/images/profile_icon.png">
         <title>Kostas Poimenidis</title>
         <link rel="stylesheet" href="static/styles.css" type="text/css">
     </head>
@@ -10,10 +11,10 @@
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="{{ url_for('main') }}">About</a></li>
-                        <li><a href="#">Resume</a></li>
+                        <li><a id="about" href="{{ url_for('main') }}">About</a></li>
+                        <li><a id="resume" href="#">Resume</a></li>
                         <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
-                        <li><a href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
+                        <li><a id="myWork" href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
                     </ul>
                 </nav>
             </div>
@@ -21,10 +22,10 @@
               <section class="hero">
                 <img src="static/images/profile.png"/>
                 <div class="hero-content">
-                  <h1>Kostas Poimenidis<br>SOFTWARE DEVELOPER</h1>
-                  <p>bla bla bla
+                  <h1 id="nameK">Kostas Poimenidis<br>SOFTWARE DEVELOPER</h1>
+                  <p id="description">bla bla bla
                   </p>
-                  <a class="action-btn" href="{{ url_for('Form') }}">Contact with me</a>
+                  <a class="action-btn" id="contact" href="{{ url_for('Form') }}">Contact with me</a>
                 </div>
               </section>
             </div>
@@ -44,3 +45,40 @@
     </body>
 </html>
 
+
+<script type="text/javascript">
+    var language = {
+        eng: {
+            about: "About",
+            resume: "Resume",
+            myWork: "My Work",
+            contact: "Contact with me",
+            description: "bla bla bla"
+        },
+        el:{
+            about: "Σχετικά",
+            resume: "Βιογραφικό",
+            myWork: "Τα Project μου",
+            contact: "Επικοινώνησε μαζί μου",
+            description: "bla bla bla"
+        }
+    };
+
+    var userLang = window.navigator.language;
+
+    if(userLang==="en-GB"){
+        about.textContent = language.eng.about;
+        resume.textContent = language.eng.resume;
+        myWork.textContent = language.eng.myWork;
+        contact.textContent = language.eng.contact;
+        description.textContent = language.eng.description;
+    }
+
+    if(userLang==="el"){
+        about.textContent = language.el.about;
+        resume.textContent = language.el.resume;
+        myWork.textContent = language.el.myWork;
+        contact.textContent = language.el.contact;
+        description.textContent = language.el.description;
+    }
+</script>
