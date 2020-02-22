@@ -12,39 +12,100 @@
                 <nav>
                     <ul>
                         <li><a id="about" href="{{ url_for('main') }}">About</a></li>
-                        <li><a id="resume" href="#">Resume</a></li>
+                        <li><a id="resume" href="{{ url_for('Resume') }}">Resume</a></li>
                         <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
                         <li><a id="myWork" href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
                     </ul>
                 </nav>
             </div>
-			
+
             <div class="content">
               <section class="hero">
-			  <a href="https://play.google.com/store/apps/details?id=com.ayeblink.captainaye.ayeblink"> 
-               <img src="static/images/ic_ayeblink_launch.png"/>
+			  <a href="https://play.google.com/store/apps/details?id=com.ayeblink.captainaye.ayeblink">
+                <img src="static/images/ic_ayeblink_launch.png"/>
 				</a>
                 <div class="hero-content">
                   <h1>AyeBlink<br>The Real social network</h1>
                   <p id="descriptionAYE">AyeBlink is created to help people get in contact and stay in touch.</p>
                 </div>
               </section>
-			  <br>
+
+			  			  <br>
 			  <br>
 			  <br>
 			  <br>
 			  <br>
 			  <br>
 			  <section class="hero2">
-			  <a href="https://play.google.com/store/apps/details?id=mytriumph.gr"> 
+			  <a href="https://play.google.com/store/apps/details?id=mytriumph.gr">
                 <img src="static/images/triumph.png"/>
 				</a>
                 <div class="hero2-content">
                   <h1>Triumph on Tichu</h1>
-                  <p id="descriptionTR">bla bla bla</p>
+                  <p id="descriptionTR">A fancy titch counter where users can play into its arena!</p>
                 </div>
               </section>
-			  
+			  			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+
+                        <div class="content">
+			                <section class="hero">
+			  <a href="https://play.google.com/store/apps/details?id=app.example.com.superbird">
+                <img id="img5" src="static/images/mariobird.png"/>
+				</a>
+                <div class="hero-content">
+                  <h1>Super Bird</h1>
+                  <p id="descriptionMario">An android game inspired by super mario and flappy bird</p>
+                </div>
+              </section>
+
+
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+
+			  <section class="hero2">
+			  <a href="https://play.google.com/store/apps/details?id=app.uom.gr.galatasaray">
+                <img id="img4" src="static/images/derby.png"/>
+				</a>
+                <div class="hero2-content">
+                  <h1>Derby County</h1>
+                    <p id="descriptionDerby">A football app for Derby County FC</p>                </div>
+              </section>
+			  			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+
+			 <div class="content">
+              <section class="hero">
+                  <a href="https://play.google.com/store/apps/details?id=app.example.com.panellinies2020">
+                    <img id="img3" src="static/images/panellinies.png"/>
+                    </a>
+                    <div class="hero-content">
+                      <h1>Πανελλήνιες 2020</h1>
+                      <p id="descriptionPan">An app which help you to calculate your final results of your exams in high school</p>
+             </div>
+              </section>
+
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
+			  <br>
 
             </div>
             <div class="footer">
@@ -70,14 +131,20 @@
             resume: "Resume",
             myWork: "My Work",
             descriptionAYE: "AyeBlink is created to help people get in contact and stay in touch.",
-            descriptionTR: "A fancy titch counter where users can play into its arena!"
+            descriptionTR: "A fancy titch counter where users can play into its arena!",
+            descriptionMario: "An android game inspired by super mario and flappy bird",
+            descriptionDerby: "A football app for Derby County FC",
+            descriptionPan: "An app which help you to calculate your final results of your exams in high school"
         },
         el:{
             about: "Σχετικά",
             resume: "Βιογραφικό",
             myWork: "Τα Project μου",
             descriptionAYE: "Το AyeBlink δημιουργήθηκε για να βοηθήσει ανθρώπους να επικοινωνούν μεταξύ τους και να βρίσκονται σε επαφή.",
-            descriptionTR: "Triumph προσφέρει την δυνατότητα σε όλους τους παίκτες Tichu να μετρήσουν τις ικανότητες τους, απλώς καταγράφοντας τα παιχνίδια που παίζουν."
+            descriptionTR: "Το Triumph προσφέρει την δυνατότητα σε όλους τους παίκτες Tichu να μετρήσουν τις ικανότητες τους, απλώς καταγράφοντας τα παιχνίδια που παίζουν."
+            descriptionMario: "Ένα παιχνίδι το οποίο εμπνεύστηκα από το Super Mario και το Flappy Bird",
+            descriptionDerby: "Μία εφαρμογή ποδοσφαρικού περιεχομένου η οποία δημιουργήθηκε για την ομάδα Derby County FC",
+            descriptionPan: "Μία εφαρμογή η οποία βοηθάει τους χρήστες της να υπολογίσουν τα μόρια που συγκέντρωσαν από τις πανελλήνιες"
         }
     };
 

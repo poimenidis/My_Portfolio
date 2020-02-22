@@ -112,6 +112,18 @@ nav li a:hover{
 	color:#98a0ad;
 }
 
+#img3{
+	background:#A6346C;
+}
+
+#img4{
+	background:gold;
+}
+
+#img5{
+	background:#A62E31;
+}
+
 footer ul{
 	max-width:640px;
 	margin:2em auto;

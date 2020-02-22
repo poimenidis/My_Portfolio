@@ -10,6 +10,10 @@ def main():
 def Google_Play():
     return  render_template('Google_Play.html')
 
+@app.route("/Resume")
+def Resume():
+    return  render_template('Resume.html')
+
 @app.route("/Form")
 def Form():
     return  render_template('Form.html')

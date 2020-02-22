@@ -12,7 +12,7 @@
                 <nav>
                     <ul>
                         <li><a id="about" href="{{ url_for('main') }}">About</a></li>
-                        <li><a id="resume" href="#">Resume</a></li>
+                        <li><a id="resume" href="{{ url_for('Resume') }}">Resume</a></li>
                         <li><a href="{{ url_for('Google_Play') }}">Google Play</a></li>
                         <li><a id="myWork" href="https://github.com/poimenidis?tab=repositories">My Work</a></li>
                     </ul>
@@ -23,7 +23,7 @@
                 <img src="static/images/profile.png"/>
                 <div class="hero-content">
                   <h1 id="nameK">Kostas Poimenidis<br>SOFTWARE DEVELOPER</h1>
-                  <p id="description">bla bla bla
+                  <p id="description">As a recent graduate from University Of Macedonia, I am seeking a role which allows me to continue learning and perfecting my skills as I provide high-quality work, and encourages me to flourish as a professional Software Developer.
                   </p>
                   <a class="action-btn" id="contact" href="{{ url_for('Form') }}">Contact with me</a>
                 </div>
@@ -53,14 +53,17 @@
             resume: "Resume",
             myWork: "My Work",
             contact: "Contact with me",
-            description: "bla bla bla"
+            description: "As a recent graduate from University Of Macedonia, I am seeking a role which allows me to continue learning and perfecting my skills as I provide high-quality work, and encourages me to flourish as a professional Software Developer."
         },
         el:{
             about: "Σχετικά",
             resume: "Βιογραφικό",
             myWork: "Τα Project μου",
             contact: "Επικοινώνησε μαζί μου",
-            description: "bla bla bla"
+            description: "Ως πρόσφατα απόφοιτος της σχολής Εφαρμοσμένη Πληροφορική του Πανεπιστήμιου Μακεδονίας, αναζητώ μία θέση εργασίας μέσω της οποίας θα μου\n" +
+                "δοθεί η δυνατότητα να πειραματιστώ με καινοτόμες τεχνικές και τεχνολογίες δίπλα\n" +
+                "σε έμπειρους συνεργάτες στο κομμάτι του προγραμματισμού, όπως επίσης να μπορέσω να εξελιχθώ ως  επαγγελματίας\n" +
+                "Προγραμματιστής Λειτουργικών Συστημάτων. Επιπλέον, βασικός μου στόχος είναι να είμαι σε θέση να συμμετέχω σε νέα πρότζεκτ που θα μπορέσουν να αλλάξουν την καθημερινότητα των ανθρώπων αισθητά."
         }
     };
 
